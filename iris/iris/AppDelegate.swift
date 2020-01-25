@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  iris
 //
-//  Created by Keith Choa on 1/25/20.
-//  Copyright © 2020 deltahacks. All rights reserved.
+//  Created by Allie Cui on 2020-01-25.
+//  Copyright © 2020 Allie Cui. All rights reserved.
 //
 
 import UIKit
