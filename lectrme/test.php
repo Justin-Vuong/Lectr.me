@@ -24,3 +24,8 @@ if ($upload_status === 0){
         echo "An error has occurred.";
     }
 }
+
+
+if (isset($_POST["button"])){
+    shell_exec("python helloworld.py")
+}
