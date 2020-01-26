@@ -23,6 +23,6 @@ if ($upload_status === 0){
 }
 
 
-if (isset($_POST["buttonTest"])){
+if (isset($_POST["button"])){
     exec("python helloworld.py")
 }
