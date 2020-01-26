@@ -10,7 +10,7 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
  if (move_uploaded_file($_FILES["file"]["tmp_name"], $target_file)) {
         echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
         shell_exec("cd uploads");
-        $command = "python audioEditing.py ". $target_file;
+        $command = "python ../audioEditing.py ". $target_file;
         //$_SESSION["debugvar"] = $command;
         $output = shell_exec($command);
         shell_exec("cd ..");
