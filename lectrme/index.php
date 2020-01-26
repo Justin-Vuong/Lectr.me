@@ -14,15 +14,15 @@ if ($file_type != "mp3"){
     $upload_status = 0;
 }
 if ($upload_status === 0){
-    echo "An error has occurred. ";
+    echo '<div class = "errorMessage">An error has occurred. </div>';
 }
 else {
     if(move_uploaded_file($_FILES["fileTest"]["tmp_name"], $uploaded_name)) {
         echo basename($_FILES["fileTest"]["name"]);
-        echo "The file ". basename($_FILES["fileTest"]["name"]). " has been uploaded.";
+        echo '<div class = "uploadedMessage"> The file '. basename($_FILES["fileTest"]["name"]). ' has been uploaded.</div>';
     }
     else {
-        echo "An error has occurred.";
+        echo '<div class = "errorMessage">An error has occurred. </div>';
     }
 }
 ?>

@@ -77,3 +77,10 @@ div{
     background-color: white;
     color: red;
 }
+
+.uploadedMessage{
+    font-family: Trebuchet MS,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Tahoma,sans-serif;
+    text-align: center;
+    background-color: white;
+    color: green;
+}
