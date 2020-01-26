@@ -66,11 +66,11 @@ session_start();
                 <div class = "col">
                     <h2>Step 2: Process</h2>
                     <input class="button" type="submit" name="submit" value="Process File">
-                    <p>Background noise level options:</p><br>
+                    <p>Background noise level options:</p>
                     <input type="radio" name="noiseLevel" value="low"> Low noise<br>
                     <input type="radio" name="noiseLevel" value="moderate"> Moderate noise<br>
                     <input type="radio" name="noiseLevel" value="high"> High noise<br>
-                    <p>Speed multiplier:</p><br>
+                    <p>Speed multiplier:</p>
                     <input type="number" name="speedMult" id="speedMult">Low noise<br>
                 </div>
                 <div class = "col">
