@@ -72,7 +72,7 @@ else {
             <div class="row">
 
                 <div class = "col">
-                    <form class="box" action="index.php" method="post" enctype="multipart/form-data">
+                    <form class="box" action="formSubmit.php" method="post" enctype="multipart/form-data">
                         <div class="file_input">
                             <h2>Step 1: Upload .mp3 File</h2>
                             <input type="file" name="fileTest" id="fileTest"></input>
