@@ -4,6 +4,7 @@ $uploaded_name = $target_directory.basename($_FILES["fileTest"]["name"]);
 $upload_status = 1;
 $file_type = strtolower(pathinfo($uploaded_name, PATHINFO_EXTENSION));
 $file_size = $_FILES["fileTest"]["size"];
+$converted_file = "www.youtube.com";
 
 if ($file_size > 400000000){
     echo "File size can't exceed 400 MB.";
@@ -65,6 +66,7 @@ else {
                     <p>LECTR.me (short for "lecture me") is an automated mp3 editor developed by undergraduate students at DeltaHacks that cuts the length of your mp3 file without taking away any important data. We do this by determining the 'silent' points of your mp3 file, and splicing them out! The result is a much shorter audio file, without any information being lost. This is a much better alternative to speeding up audio files for faster listening.</p>
                     <br>
                 </div>
+
                 <div class = "col-2">
                 </div>
             </div>
@@ -83,9 +85,10 @@ else {
                     <h2>Step 2: Process</h2>
                     <input class="button buttonTest" type="submit" name="submittest" id="submittest" value="Process File"></input>
                 </div>
+
                 <div class = "col">
                     <h2>Step 3: Download converted .mp3 File</h2>
-                    <button class = "button">Download File</button>
+                    <button class = "button" href = "<?$converted_file?>">Download File</button>
                 </div>
 
             </div>
