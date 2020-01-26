@@ -3,8 +3,9 @@ $target_directory = 'uploads/';
 $uploaded_name = $target_directory . basename($_FILES['uploadedmp3']['name']);
 $upload_status = 1;
 $file_type = strtolower(pathinfo($uploaded_name, PATHINFO_EXTENSION));
-$file_size = $_FILES['uploadedmp3']["size"];
+$file_size = $_FILES['uploadedmp3']['size'];
 
+echo $_FILES;
 echo $target_directory;
 echo $uploaded_name;
 echo $file_type;
