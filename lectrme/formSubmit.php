@@ -13,9 +13,9 @@ if ($upload_status === 0){
     echo '<div class = "errorMessage">An error has occurred. Upload Status is 0.</div>';
 }
 else {
-    if(move_uploaded_file($_FILES["uploadedmp3"]["name"], $uploaded_name)) {
-        echo basename($_FILES["uploadedmp3"]["name"]);
-        echo '<div class = "uploadedMessage"> The file '. basename($_FILES["uploadedmp3"]["name"]). ' has been uploaded.</div>';
+    if(move_uploaded_file($_FILES['uploadedmp3']['name'], $uploaded_name)) {
+        echo basename($_FILES['uploadedmp3']['name']);
+        echo '<div class = "uploadedMessage"> The file '. basename($_FILES['uploadedmp3']['name']). ' has been uploaded.</div>';
     }
     else {
         echo '<div class = "errorMessage">An error has occurred. </div>';
