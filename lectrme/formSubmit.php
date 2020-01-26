@@ -12,7 +12,7 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
         $command = 'python audioEditing.py '. $target_file;
         $output = shell_exec($command);
-        $_SESSION["cut_file"] = $output;
+        $_SESSION["cut_file"] = "uploads/". $output;
     } else {
         echo "Sorry, there was an error uploading your file.";
         $_SESSION["failed"] = true;
