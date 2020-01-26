@@ -9,6 +9,10 @@ echo $target_directory;
 echo $uploaded_name;
 echo $file_type;
 
+if ($file_type == ""){
+    echo 'lmao fucc u';
+    $upload_status = 0;
+}
 if ($file_type != "mp3"){
     echo '<div class = "errorMessage"> Only audio files are allowed to be uploaded. </div>';
     $upload_status = 0;
