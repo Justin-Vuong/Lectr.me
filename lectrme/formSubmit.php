@@ -10,7 +10,7 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
  if (move_uploaded_file($_FILES["file"]["tmp_name"], $target_file)) {
         echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
 
-        $command = escapeshellcmd('/usr/bin/python /var/www/html/gitDH/DeltaHacks6/lectrme/audioEditing.py /var/www/html/gitDH/DeltaHacks6/lectrme/'. $target_file);
+        $command = "/usr/bin/python /var/www/html/gitDH/DeltaHacks6/lectrme/audioEditing.py /var/www/html/gitDH/DeltaHacks6/lectrme/". $target_file;
 
         //$_SESSION["debugvar"] = $command;
 
@@ -26,10 +26,4 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
     }
 
 header("Location: index.php");
-
-
-
-
-
-
 ?>
