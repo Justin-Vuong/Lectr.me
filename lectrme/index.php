@@ -23,7 +23,7 @@ session_start();
                 echo "<div class = 'errorMessage'>An error has occurred. move_uploaded_file is failing.</div>";
                 //$_SESSION["failed"] = false;
             }
-            else{
+            else if($_SESSION["failed"] == false){
                 echo "<div class = 'uploadedMessage'>Your file has been uploaded.</div>";
             }
         ?>
