@@ -1,3 +1,32 @@
+<?php
+$target_directory = '/var/www/html/gitDH/DeltaHacks6/lectrme/uploads/';
+$uploaded_name = $target_directory . basename($_FILES['uploadedmp3']['name']);
+$upload_status = 1;
+$file_type = strtolower(pathinfo($uploaded_name, PATHINFO_EXTENSION));
+$file_size = $_FILES['uploadedmp3']['size'];
+
+echo $_FILES['uploadedmp3']['name'];
+echo $uploaded_name;
+
+if ($file_type != 'mp3'){
+    echo '<div class = "errorMessage"> Only audio files are allowed to be uploaded. </div>';
+    $upload_status = 0;
+}
+if ($upload_status === 0){
+    echo '<div class = "errorMessage">An error has occurred. Upload Status is 0.</div>';
+}
+else {
+    if(move_uploaded_file($_FILES['uploadedmp3']['name'], $uploaded_name)) {
+        echo basename($_FILES['uploadedmp3']['name']);
+        echo '<div class = "uploadedMessage"> The file '. basename($_FILES['uploadedmp3']['name']). ' has been uploaded.</div>';
+    }
+    else {
+        echo '<div class = "errorMessage">An error has occurred. move_uploaded_file is failing.</div>';
+    }
+}
+?>
+
+
 <meta http-equiv="pragma" content="no-cache" />
 <html>
     <head>
@@ -35,6 +64,7 @@
                     <p>LECTR.me (short for "lecture me") is an automated mp3 editor developed by undergraduate students at DeltaHacks that cuts the length of your mp3 file without taking away any important data. We do this by determining the 'silent' points of your mp3 file, and splicing them out! The result is a much shorter audio file, without any information being lost. This is a much better alternative to speeding up audio files for faster listening.</p>
                     <br>
                 </div>
+
                 <div class = "col-2">
                 </div>
             </div>
@@ -42,17 +72,19 @@
             <div class="row">
 
                 <div class = "col">
-                    <h2>Step 1: Upload .mp3 File</h2>
-                    <form role="form" action="formSubmit.php" method="POST" enctype="multipart/form-data">
-                        <input type="file" name="uploadedmp3" id="uploadedmp3">
-                        <input type="submit" name="submit" value="Process File">
+                    <form class="box" action="formSubmit.php" method="post" enctype="multipart/form-data">
+                        <div class="file_input">
+                            <h2>Step 1: Upload .mp3 File</h2>
+                            <input type="file" name="uploadedmp3" id="uploadedmp3">
+                        </div>
                     </form>
                 </div> 
                 
                 <div class = "col">
                     <h2>Step 2: Process</h2>
-                    <!---<input class="button" type="submit" name="process" id="process" value="Process File"></input>--->
+                    <input class="button buttonTest" type="submit" name="submit" value="Process File">
                 </div>
+
                 <div class = "col">
                     <h2>Step 3: Download converted .mp3 File</h2>
                     <button class = "button">Download File</button>
