@@ -66,10 +66,12 @@ session_start();
                 <div class = "col">
                     <h2>Step 2: Process</h2>
                     <input class="button" type="submit" name="submit" value="Process File">
-
+                    <p>Background noise level options:</p><br>
                     <input type="radio" name="noiseLevel" value="low"> Low noise<br>
                     <input type="radio" name="noiseLevel" value="moderate"> Moderate noise<br>
-                    <input type="radio" name="noiseLevel" value="high"> High noise
+                    <input type="radio" name="noiseLevel" value="high"> High noise<br>
+                    <p>Speed multiplier:</p><br>
+                    <input type="number" name="speedMult" id="speedMult">Low noise<br>
                 </div>
                 <div class = "col">
                     <h2>Step 3: Download converted .mp3 File</h2>
