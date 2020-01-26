@@ -88,7 +88,9 @@ else {
 
                 <div class = "col">
                     <h2>Step 3: Download converted .mp3 File</h2>
-                    <button class = "button" href = "<?$converted_file?>">Download File</button>
+                    <form action = "<?php $converted_file?>">
+                    <input class = "button" type = "submit">">Download File</input>
+                    </form>
                 </div>
 
             </div>
