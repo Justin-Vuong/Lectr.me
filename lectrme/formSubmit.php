@@ -1,12 +1,8 @@
 <?php
 $target_directory = 'uploads/';
-$uploaded_name = $target_directory . basename($_FILES['uploadedmp3']['name']);
+$uploaded_name = '/var/www/html/gitDH/DeltaHacks6/lectrme/uploads/newname.mp3';//$target_directory . basename($_FILES['uploadedmp3']['name']);
 $upload_status = 1;
 $file_type = strtolower(pathinfo($uploaded_name, PATHINFO_EXTENSION));
-$file_size = $_FILES['uploadedmp3']['size'];
-
-echo $_FILES['uploadedmp3']['name'];
-echo $uploaded_name;
 
 if ($file_type != 'mp3'){
     echo '<div class = "errorMessage"> Only audio files are allowed to be uploaded. </div>';
@@ -14,7 +10,6 @@ if ($file_type != 'mp3'){
 }
 if ($upload_status === 0){
     echo '<div class = "errorMessage">An error has occurred. Upload Status is 0.</div>';
-    echo "Not uploaded because of error #".$_FILES["file"]["error"];
 }
 else {
     if(move_uploaded_file($_FILES['uploadedmp3']['name'], $uploaded_name)) {
@@ -23,7 +18,6 @@ else {
     }
     else {
         echo '<div class = "errorMessage">An error has occurred. move_uploaded_file is failing.</div>';
-        echo "Not uploaded because of error #".$_FILES["uploadedmp3"]["error"];
     }
 }
 ?>
