@@ -65,8 +65,7 @@ session_start();
                 
                 <div class = "col">
                     <h2>Step 2: Process</h2>
-                    <!---<input class="button" type="submit" name="process" id="process" value="Process File"></input>--->
-                    <input type="submit" name="submit" value="Process File">
+                    <input class="button" type="submit" name="submit" value="Process File">
                 </div>
                 <div class = "col">
                     <h2>Step 3: Download converted .mp3 File</h2>
