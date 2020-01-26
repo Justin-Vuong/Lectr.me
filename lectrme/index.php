@@ -60,20 +60,18 @@ session_start();
                     <h2>Step 1: Upload .mp3 File</h2>
                     <form role="form" action="formSubmit.php" method="POST" enctype="multipart/form-data">
                         <input type="file" name="file" id="file">
-                        <input type="submit" name="submit" value="Process File">
-                    </form>
+                    
                 </div> 
                 
                 <div class = "col">
                     <h2>Step 2: Process</h2>
                     <!---<input class="button" type="submit" name="process" id="process" value="Process File"></input>--->
+                    <input type="submit" name="submit" value="Process File">
                 </div>
                 <div class = "col">
                     <h2>Step 3: Download converted .mp3 File</h2>
 
                     <?php
-                    echo "cutfileaddress: ". $_SESSION["cut_file"];
-                    echo " debugvar: ". $_SESSION["debugvar"];
                     echo '<button class = "button"> <a href="'. $_SESSION["cut_file"]. '">Download</a> </button>';
                     ?>
 

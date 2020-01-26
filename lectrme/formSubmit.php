@@ -10,10 +10,7 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
  if (move_uploaded_file($_FILES["file"]["tmp_name"], $target_file)) {
 
         $command = "cd uploads && python ../audioEditing.py ". $_FILES["file"]["name"];
-        $_SESSION["debugvar"] = $command;
         $output = shell_exec($command);
-        
-        //$_SESSION["debugvar"] = $output;
         $_SESSION["cut_file"] = "uploads/". $output;
     } else {
         $_SESSION["failed"] = true;
