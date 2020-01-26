@@ -1,0 +1,45 @@
+div.buttonTest input {
+    background-image: url(img/background_gradient.jpg);
+    cursor:pointer;
+    width:200px;
+    height:100px;
+    border: none;
+}
+
+.file_input {
+}
+title {
+    font-family: Verdana;
+}
+body {
+    background: url(img/background_gradient.jpg);
+    background-size: cover;
+}
+.html {
+    background-image: url(img/background_gradient.jpg);
+}
+h1 {
+    font-family: Trebuchet MS,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Tahoma,sans-serif;font-size:90px;
+    text-align: center;
+    padding-top: 50px;
+}
+h2 {
+    font-family: Trebuchet MS,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Tahoma,sans-serif;font-size:20px;
+    padding-left: 80px
+}
+h3 {
+    -family: Trebuchet MS,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Tahoma,sans-serif;
+    font-size:20px
+}
+.barcode{
+    white-space:pre;
+}
+body  {background-image: url("https://www.xmple.com/wallpaper/gradient-azure-turquoise-linear-2880x1800-c2-3269c1-67f9ac-a-0-f-14.svg");background-size: cover
+}
+
+.img_logo {
+    max-width:15%;
+    height:auto;
+    padding-bottom:35px;
+    padding-left:5px;
+}
