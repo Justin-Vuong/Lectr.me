@@ -8,8 +8,8 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
 // Check if image file is a actual image orssssss fake image
  if (move_uploaded_file($_FILES["file"]["tmp_name"], $target_file)) {
-
-        $command = "cd uploads && python ../audioEditing.py ". $_FILES["file"]["name"];
+        $noise_level = $_REQUEST['noiseLevel'];
+        $command = "cd uploads && python ../audioEditing.py ". $_FILES["file"]["name"]. " ". $noise_level;
         $output = shell_exec($command);
         $_SESSION["cut_file"] = "uploads/". $output;
     } else {
