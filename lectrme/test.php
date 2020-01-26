@@ -24,5 +24,5 @@ if ($upload_status === 0){
 
 
 if (isset($_POST["button"])){
-    shell_exec("python helloworld.py");
+    echo shell_exec("python helloworld.py");
 }
