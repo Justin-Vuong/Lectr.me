@@ -1,9 +1,7 @@
 <?php
 session_start();
-
-
-
 ?>
+
 <meta http-equiv="pragma" content="no-cache" />
 <html>
     <head>
@@ -19,15 +17,16 @@ session_start();
         <link rel="shortcut icon" href="img/favicon_round.png" type="image/x-icon">
     </head>
     <body>
-<?php
-if ($_SESSION["failed"] == true) {
-echo "<div class = 'errorMessage'>An error has occurred. move_uploaded_file is failing.</div>";
-$_SESSION["failed"] = false;
-}
 
-
-?>
-
+        <?php
+            if ($_SESSION["failed"] == true) {
+                echo "<div class = 'errorMessage'>An error has occurred. move_uploaded_file is failing.</div>";
+                $_SESSION["failed"] = false;
+            }
+            else{
+                echo "<div class = 'uploadedMessage'>Your file has been uploaded.</div>";
+            }
+        ?>
 
         <div class="container-fluid">
 
@@ -71,7 +70,10 @@ $_SESSION["failed"] = false;
                 </div>
                 <div class = "col">
                     <h2>Step 3: Download converted .mp3 File</h2>
-                    <button class = "button">Download File</button>
+<?php
+echo '<a href="'. $_SESSION["cut_file"]. '">Download</a>';
+?>
+
                 </div>
 
             </div>
