@@ -1,3 +1,9 @@
+<?php
+session_start();
+
+
+
+?>
 <meta http-equiv="pragma" content="no-cache" />
 <html>
     <head>
@@ -13,6 +19,16 @@
         <link rel="shortcut icon" href="img/favicon_round.png" type="image/x-icon">
     </head>
     <body>
+<?php
+if ($_SESSION["failed"] == true) {
+echo "<div class = 'errorMessage'>An error has occurred. move_uploaded_file is failing.</div>";
+$_SESSION["failed"] = false;
+}
+
+
+?>
+
+
         <div class="container-fluid">
 
             <div class="row">
@@ -43,7 +59,7 @@
 
                 <div class = "col">
                     <h2>Step 1: Upload .mp3 File</h2>
-                    <form role="form" action="submitTest.php" method="POST" enctype="multipart/form-data">
+                    <form role="form" action="formSubmit.php" method="POST" enctype="multipart/form-data">
                         <input type="file" name="file" id="file">
                         <input type="submit" name="submit" value="Process File">
                     </form>
