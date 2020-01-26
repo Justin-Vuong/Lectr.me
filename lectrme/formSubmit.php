@@ -5,8 +5,11 @@ $upload_status = 1;
 $file_type = strtolower(pathinfo($uploaded_name, PATHINFO_EXTENSION));
 $file_size = $_FILES["uploadedmp3"]["size"];
 
+echo $target_directory;
+echo $uploaded_name;
+echo $file_type;
+
 if ($file_type != "mp3"){
-    echo $file_type;
     echo '<div class = "errorMessage"> Only audio files are allowed to be uploaded. </div>';
     $upload_status = 0;
 }
