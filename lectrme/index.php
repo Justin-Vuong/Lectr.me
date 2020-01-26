@@ -70,8 +70,7 @@ session_start();
                     <input type="radio" name="noiseLevel" value="low"> Low noise<br>
                     <input type="radio" name="noiseLevel" value="moderate"> Moderate noise<br>
                     <input type="radio" name="noiseLevel" value="high"> High noise<br>
-                    <p>Speed multiplier:</p>
-                    <input type="number" name="speedMult" id="speedMult">Low noise<br>
+                    <p>Speed multiplier: </p> <input type="number" name="speedMult" id="speedMult">
                 </div>
                 <div class = "col">
                     <h2>Step 3: Download converted .mp3 File</h2>
