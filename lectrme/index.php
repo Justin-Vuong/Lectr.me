@@ -73,6 +73,7 @@ session_start();
 
                     <?php
                     echo $_SESSION["cut_file"];
+                    echo $_SESSION["debugvar"];
                     echo '<button class = "button"> <a href="'. $_SESSION["cut_file"]. '">Download</a> </button>';
                     ?>
 
