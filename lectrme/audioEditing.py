@@ -37,13 +37,13 @@ try:
     outputFile = output[0]
     for a in range(1, len(output)):
         outputFile += output[a]
-        print(str(num))
+        #print(str(num))
         num+=1
 except:
     outputFile = editFile
 
 compression = int(100.0* round(1.0 - (float(len(outputFile))/float(len(editFile))),4))
-print("Trying with silence at " + str(minDB_silence) + "dB and the compression is " + str(compression))
+#print("Trying with silence at " + str(minDB_silence) + "dB and the compression is " + str(compression))
 exportFile = outputFile
 
 if(args.playback_speed != 1):
@@ -52,5 +52,5 @@ if(args.playback_speed != 1):
 else:
     exportFile.export("Cut_"+ args.filename, format='mp3')
 
-print("Done. Cut_" + args.filename + " was cut down by " + str(compression) + "%")
+#print("Done. Cut_" + args.filename + " was cut down by " + str(compression) + "%")
 print("Cut_"+ args.filename)
