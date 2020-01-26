@@ -1,9 +1,9 @@
 <?php
-$target_directory = "uploads/";
-$uploaded_name = $target_directory . basename($_FILES["uploadedmp3"]["name"]);
+$target_directory = 'uploads/';
+$uploaded_name = $target_directory . basename($_FILES['uploadedmp3']['name']);
 $upload_status = 1;
 $file_type = strtolower(pathinfo($uploaded_name, PATHINFO_EXTENSION));
-$file_size = $_FILES["uploadedmp3"]["size"];
+$file_size = $_FILES['uploadedmp3']["size"];
 
 echo $target_directory;
 echo $uploaded_name;
@@ -13,7 +13,7 @@ if ($file_type == ""){
     echo 'lmao fucc u';
     $upload_status = 0;
 }
-if ($file_type != "mp3"){
+if ($file_type != 'mp3'){
     echo '<div class = "errorMessage"> Only audio files are allowed to be uploaded. </div>';
     $upload_status = 0;
 }
