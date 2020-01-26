@@ -10,7 +10,7 @@ if ($file_size > 400000000){
     $upload_status = 0;
 }
 if ($file_type != "mp3"){
-    echo "Only audio files are allowed to be uploaded. ";
+    echo '<div class = "errorMessage"> Only audio files are allowed to be uploaded. </div>';
     $upload_status = 0;
 }
 if ($upload_status === 0){

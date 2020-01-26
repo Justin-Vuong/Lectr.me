@@ -70,3 +70,10 @@ p {
 div{
     text-align: center;
 }
+
+.errorMessage{
+    font-family: Trebuchet MS,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Tahoma,sans-serif;
+    text-align: center;
+    background-color: white;
+    color: red;
+}
