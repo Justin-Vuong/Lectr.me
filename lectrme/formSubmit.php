@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+$_SESSION["start"] = false;
+
 $target_dir = "uploads/";
 $target_file = $target_dir . basename($_FILES["file"]["name"]);
 $uploadOk = 1;

@@ -1,5 +1,6 @@
 <?php
 session_start();
+$_SESSION["start"] = true;
 ?>
 
 <meta http-equiv="pragma" content="no-cache" />
@@ -23,7 +24,7 @@ session_start();
                 echo "<div class = 'errorMessage'>An error has occurred. move_uploaded_file is failing.</div>";
                 //$_SESSION["failed"] = false;
             }
-            else if($_SESSION["failed"] == false){
+            else if($_SESSION["failed"] == false && $_SESSION["start"] == false;){
                 echo "<div class = 'uploadedMessage'>Your file has been uploaded.</div>";
             }
         ?>
