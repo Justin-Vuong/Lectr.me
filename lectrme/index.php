@@ -15,12 +15,12 @@
         <div class="container-fluid">
             <head>
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col">
                     </div>
-                    <div class="col-md-4">
+                    <div class="col">
                         <h1><font color="white"> L E C T R <img class="img_logo" src="img/logo_transparent.png"></font></h1>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col">
                     </div>
                 </div>
             </head>
@@ -50,18 +50,19 @@ if ($file_size > 400000000){
     echo "File size can't exceed 400 MB.";
     $upload_status = 0;
 }
-
 if ($file_type != "mp3"){
     echo "Only audio files are allowed to be uploaded. ";
     $upload_status = 0;
 }
 if ($upload_status === 0){
     echo "An error has occurred. ";
-} else {
+}
+else {
     if(move_uploaded_file($_FILES["fileTest"]["tmp_name"], $uploaded_name)) {
         echo basename($_FILES["fileTest"]["name"]);
         echo "The file ". basename($_FILES["fileTest"]["name"]). " has been uploaded.";
-    } else {
+    }
+    else {
         echo "An error has occurred.";
     }
 }
