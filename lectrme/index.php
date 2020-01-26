@@ -70,9 +70,11 @@ session_start();
                 </div>
                 <div class = "col">
                     <h2>Step 3: Download converted .mp3 File</h2>
-<?php
-echo '<button class = "button"> <a href="'. $_SESSION["cut_file"]. '">Download</a> </button>';
-?>
+
+                    <?php
+                    echo $_SESSION["cut_file"];
+                    echo '<button class = "button"> <a href="'. $_SESSION["cut_file"]. '">Download</a> </button>';
+                    ?>
 
                 </div>
 
