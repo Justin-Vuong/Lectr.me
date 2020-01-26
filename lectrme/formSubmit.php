@@ -14,7 +14,7 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
         $output = shell_exec($command);
         
         //$_SESSION["debugvar"] = $output;
-        $_SESSION["cut_file"] = "uploads/Cut_". $output;
+        $_SESSION["cut_file"] = "uploads/". $output;
     } else {
         $_SESSION["failed"] = true;
     }
