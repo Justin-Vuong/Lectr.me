@@ -85,11 +85,12 @@ else {
                     <h2>Step 2: Process</h2>
                     <input class="button buttonTest" type="submit" name="submittest" id="submittest" value="Process File"></input>
                 </div>
-
+                    </form>
+                    
                 <div class = "col">
                     <h2>Step 3: Download converted .mp3 File</h2>
                     <form action = "<?php $converted_file?>">
-                    <input class = "button" type = "submit">">Download File</input>
+                    <input class = "button" type = "submit">Download File</input>
                     </form>
                 </div>
 
