@@ -1,15 +1,10 @@
 <?php
 $target_directory = "uploads/";
-$uploaded_name = $target_directory.basename($_FILES["fileTest"]["name"]);
+$uploaded_name = $target_directory.basename($_FILES["uploadedmp3"]["name"]);
 $upload_status = 1;
 $file_type = strtolower(pathinfo($uploaded_name, PATHINFO_EXTENSION));
-$file_size = $_FILES["fileTest"]["size"];
-$converted_file = "www.youtube.com";
+$file_size = $_FILES["uploadedmp3"]["size"];
 
-if ($file_size > 400000000){
-    echo "File size can't exceed 400 MB.";
-    $upload_status = 0;
-}
 if ($file_type != "mp3"){
     echo '<div class = "errorMessage"> Only audio files are allowed to be uploaded. </div>';
     $upload_status = 0;
@@ -18,9 +13,9 @@ if ($upload_status === 0){
     echo '<div class = "errorMessage">An error has occurred. </div>';
 }
 else {
-    if(move_uploaded_file($_FILES["fileTest"]["tmp_name"], $uploaded_name)) {
-        echo basename($_FILES["fileTest"]["name"]);
-        echo '<div class = "uploadedMessage"> The file '. basename($_FILES["fileTest"]["name"]). ' has been uploaded.</div>';
+    if(move_uploaded_file($_FILES["uploadedmp3"]["tmp_name"], $uploaded_name)) {
+        echo basename($_FILES["uploadedmp3"]["name"]);
+        echo '<div class = "uploadedMessage"> The file '. basename($_FILES["uploadedmp3"]["name"]). ' has been uploaded.</div>';
     }
     else {
         echo '<div class = "errorMessage">An error has occurred. </div>';
@@ -77,21 +72,18 @@ else {
                     <form class="box" action="formSubmit.php" method="post" enctype="multipart/form-data">
                         <div class="file_input">
                             <h2>Step 1: Upload .mp3 File</h2>
-                            <input type="file" name="fileTest" id="fileTest"></input>
+                            <input type="file" name="uploadedmp3" id="uploadedmp3"></input>
                         </div>
                 </div> 
                 
                 <div class = "col">
                     <h2>Step 2: Process</h2>
-                    <input class="button buttonTest" type="submit" name="submittest" id="submittest" value="Process File"></input>
+                    <input class="button buttonTest" type="submit" name="process" id="process" value="Process File"></input>
                 </div>
-                    </form>
-                    
+
                 <div class = "col">
                     <h2>Step 3: Download converted .mp3 File</h2>
-                    <form action = "<?php $converted_file?>">
-                    <input class = "button" type = "submit">Download File</input>
-                    </form>
+                    <button class = "button">Download File</button>
                 </div>
 
             </div>
