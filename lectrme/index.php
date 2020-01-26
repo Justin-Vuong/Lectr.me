@@ -21,7 +21,7 @@ session_start();
         <?php
             if ($_SESSION["failed"] == true) {
                 echo "<div class = 'errorMessage'>An error has occurred. move_uploaded_file is failing.</div>";
-                $_SESSION["failed"] = false;
+                //$_SESSION["failed"] = false;
             }
             else{
                 echo "<div class = 'uploadedMessage'>Your file has been uploaded.</div>";
