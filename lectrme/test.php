@@ -21,3 +21,8 @@ if ($upload_status === 0){
         echo "test test :(";
     }
 }
+
+
+if (isset($_POST["buttonTest"])){
+    exec("python helloworld.py")
+}
