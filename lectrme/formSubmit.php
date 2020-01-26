@@ -76,13 +76,13 @@ else {
                     <form class="box" action="formSubmit.php" method="post" enctype="multipart/form-data">
                         <div class="file_input">
                             <h2>Step 1: Upload .mp3 File</h2>
-                            <input type="file" name="uploadedmp3" id="uploadedmp3"></input>
+                            <input type="file" name="uploadedmp3" id="uploadedmp3">
                         </div>
                 </div> 
                 
                 <div class = "col">
                     <h2>Step 2: Process</h2>
-                    <input class="button buttonTest" type="submit" name="process" id="process" value="Process File"></input>
+                    <input class="button buttonTest" type="submit" name="submit" id="process" value="Process File">
                 </div>
 
                 <div class = "col">
