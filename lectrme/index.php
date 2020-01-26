@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
 <div class="container-fluid">
@@ -26,7 +26,7 @@
     </head>
     <body>
     <div class="row">
-        <form class="box" action="test.php" method="post" enctype="multipart/form-data">
+        <form class="box" action="index.php" method="post" enctype="multipart/form-data">
             <div class="file_input">
                 <input type="file" name="fileTest" id="fileTest">
                 <h2 class="barcode"><font color="white"> U P L O A D F I L E S </font></h2></input>
