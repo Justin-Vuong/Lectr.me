@@ -1,5 +1,5 @@
 <?php
-$target_directory = '/var/www/html/gitDH/DeltaHacks6/lectrme/uploads/';
+$target_directory = 'uploads/';
 $uploaded_name = $target_directory . basename($_FILES['uploadedmp3']['name']);
 $upload_status = 1;
 $file_type = strtolower(pathinfo($uploaded_name, PATHINFO_EXTENSION));
@@ -14,6 +14,7 @@ if ($file_type != 'mp3'){
 }
 if ($upload_status === 0){
     echo '<div class = "errorMessage">An error has occurred. Upload Status is 0.</div>';
+    echo "Not uploaded because of error #".$_FILES["file"]["error"];
 }
 else {
     if(move_uploaded_file($_FILES['uploadedmp3']['name'], $uploaded_name)) {
