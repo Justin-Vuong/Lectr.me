@@ -19,3 +19,6 @@ We learnt a lot about the importance of working collaboratively to create a full
 
 ## What's next for lectr.me
 Ideally, we'd like to develop the idea to have much more features-- perhaps introducing video, and other options. This idea was really a starting point and there's so much potential for it.
+
+## Examples
+https://drive.google.com/drive/folders/1eUm0j95Im7Uh5GG4HwLQXreF0Lzu1TNi?usp=sharing
