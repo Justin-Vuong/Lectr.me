@@ -72,8 +72,8 @@ session_start();
                     <h2>Step 3: Download converted .mp3 File</h2>
 
                     <?php
-                    echo $_SESSION["cut_file"];
-                    echo $_SESSION["debugvar"];
+                    echo "cutfileaddress: ". $_SESSION["cut_file"];
+                    echo " debugvar: ". $_SESSION["debugvar"];
                     echo '<button class = "button"> <a href="'. $_SESSION["cut_file"]. '">Download</a> </button>';
                     ?>
 
