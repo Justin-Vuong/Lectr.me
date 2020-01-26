@@ -23,7 +23,7 @@ else {
     }
     else {
         echo '<div class = "errorMessage">An error has occurred. move_uploaded_file is failing.</div>';
-        echo "Not uploaded because of error #".$_FILES["file"]["error"];
+        echo "Not uploaded because of error #".$_FILES["uploadedmp3"]["error"];
     }
 }
 ?>
